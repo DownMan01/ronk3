@@ -515,11 +515,11 @@ export default function InvestmentCalculator() {
             <CardDescription>Based on farming formula with {currentTier.yieldRate} yield rate</CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="mb-4 p-4 bg-yellow-50 dark:bg-yellow-950/20 border border-yellow-200 dark:border-yellow-800 rounded-lg">
+            <div className="mb-4 p-4 bg-red-50 dark:bg-red-950/20 border border-red-200 dark:border-red-800 rounded-lg">
               <div className="flex items-start gap-3">
                 <div className="flex-shrink-0">
                   <svg
-                    className="h-5 w-5 text-yellow-600 dark:text-yellow-400 mt-0.5"
+                    className="h-5 w-5 text-red-600 dark:text-red-400 mt-0.5"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -531,11 +531,9 @@ export default function InvestmentCalculator() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="text-red-800 dark:text-red-400 mb-1 font-bold leading-9 text-lg">Important Notice</h4>
+                  <h4 className="text-red-800 dark:text-red-400 mb-1 font-bold text-sm leading-7">Important Notice</h4>
                   <p className="text-sm text-red-700 dark:text-red-300">
-                    The <strong>Current Network Yield Rate</strong> changes frequently as players join or leave the
-                    network. Please input your current <strong>Network Yield Rate</strong> from your game stats for
-                    accurate earnings calculations.
+                    The <strong>Current Network Yield Rate</strong> changes as players join/leave. Enter your current rate from game stats for accurate earnings.
                   </p>
                 </div>
               </div>
@@ -625,7 +623,9 @@ export default function InvestmentCalculator() {
                   <div>
                     <h4 className="text-red-800 dark:text-red-400 mb-1 font-bold text-sm">Penalty Notice</h4>
                     <p className="text-sm text-red-700 dark:text-red-300">
-                      {"Withdrawal penalties apply to all \$RICE, even if not farmed. They remain in effect regardless of how tokens were obtained."}
+                      {
+                        "Withdrawal penalties apply to all $RICE, even if not farmed. They remain in effect regardless of how tokens were obtained."
+                      }
                     </p>
                   </div>
                 </div>
