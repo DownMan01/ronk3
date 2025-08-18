@@ -533,7 +533,7 @@ export default function InvestmentCalculator() {
                 <div>
                   <h4 className="text-red-800 dark:text-red-400 mb-1 font-bold text-sm leading-7">Important Notice</h4>
                   <p className="text-sm text-red-700 dark:text-red-300">
-                    The <strong>Current Network Yield Rate</strong> changes as players join/leave. Enter your current rate from game stats for accurate earnings.
+                    The Current Network Yield Rate changes as players join/leave. Enter your current rate from game stats for accurate earnings.
                   </p>
                 </div>
               </div>
