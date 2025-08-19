@@ -360,6 +360,7 @@ export default function InvestmentCalculator() {
               {Object.entries(FARM_TIERS).map(([tierNum, tier]) => {
                 const isSelected = selectedTier === Number(tierNum)
                 const totalSetupCost = calculateInvestment(tier.farmerCost, tier.landCost)
+                const tierDailyRiceEarnings = FARMING_FORMULA.totalDailyReward * (tier.yieldRate / customNetworkYield)
 
                 return (
                   <div
@@ -403,6 +404,12 @@ export default function InvestmentCalculator() {
                         <div className="flex justify-between">
                           <span>Hash Rice:</span>
                           <span className="font-semibold text-primary">{tier.yieldRate} Yield Rate</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span>Est. Daily $RICE:</span>
+                          <span className="font-semibold dark:text-green-400 text-yellow-700">
+                            {tierDailyRiceEarnings.toFixed(3)} $RICE
+                          </span>
                         </div>
                         <div className="flex justify-between">
                           <span>Setup:</span>
@@ -858,7 +865,7 @@ export default function InvestmentCalculator() {
                 href="https://etherscan.io/address/0x17f016c583061e260435ec7AC8302B67c04b4Cde"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-mono text-red-600 hover:text-red-600/80 transition-colors underline decoration-dotted"
+                className="font-mono text-red-400 hover:text-red-400/80 transition-colors underline decoration-dotted"
               >
                 0x17f016c583061e260435ec7AC8302B67c04b4Cde
               </a>
