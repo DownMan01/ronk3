@@ -349,7 +349,7 @@ export default function InvestmentCalculator() {
                 href="/customize-farm"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-secondary to-primary hover:from-secondary/90 hover:to-primary/90 text-primary-foreground font-semibold shadow-lg transition-all duration-300 rounded-full leading-6"
               >
-                Customized Setup
+                Customize Setup
               </a>
               <p className="text-sm text-muted-foreground mt-2">
                 Need more control? Use our advanced calculator to customize your farm configuration
