@@ -58,7 +58,7 @@ const FARMER_TYPES = {
 
 const FARMING_FORMULA = {
   totalDailyReward: 148408.65,
-  totalNetworkYield: 1700210,
+  totalNetworkYield: 1705310,
 }
 
 export default function InvestmentCalculator() {
@@ -196,7 +196,7 @@ export default function InvestmentCalculator() {
               <p className="text-sm text-muted-foreground">
                 Use this code:{" "}
                 <a
-                  href="https://ronkericefarmer.com/connect?ref=0NQ0OJ"
+                  href="https://ronkericefarmer.com?ref=0NQ0OJ"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-mono bg-primary/10 px-2 py-1 rounded-md text-red-600 font-semibold hover:bg-primary/20 transition"
@@ -272,7 +272,7 @@ export default function InvestmentCalculator() {
                       <select
                         value={converterToken}
                         onChange={(e) => setConverterToken(e.target.value as "RICE" | "RONKE")}
-                        className="px-4 py-3 border border-l-0 rounded-l-none rounded-r-md bg-blue-100 dark:bg-blue-800 text-blue-800 dark:text-blue-100 border-blue-300 dark:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 font-bold text-sm min-w-[80px]"
+                        className="px-4 py-3 border border-l-0 rounded-l-none rounded-r-md bg-blue-100 dark:bg-blue-800 text-blue-800 dark:text-blue-100 border-blue-300 dark:border-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 font-bold min-w-[80px] text-xs"
                       >
                         <option value="RICE">RICE</option>
                         <option value="RONKE">RONKE</option>
@@ -302,7 +302,7 @@ export default function InvestmentCalculator() {
                       <select
                         value={converterCurrency}
                         onChange={(e) => setConverterCurrency(e.target.value as Currency)}
-                        className="px-4 py-3 border border-l-0 rounded-l-none rounded-r-md bg-green-100 dark:bg-green-800 text-green-800 dark:text-green-100 border-green-300 dark:border-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 font-bold text-sm min-w-[70px]"
+                        className="px-4 py-3 border border-l-0 rounded-l-none rounded-r-md bg-green-100 dark:bg-green-800 text-green-800 dark:text-green-100 border-green-300 dark:border-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 font-bold min-w-[70px] text-xs"
                       >
                         <option value="PHP">PHP</option>
                         <option value="USD">USD</option>
@@ -467,7 +467,7 @@ export default function InvestmentCalculator() {
               <p className="text-sm text-muted-foreground">
                 Use this code:{" "}
                 <a
-                  href="https://ronkericefarmer.com/connect?ref=0NQ0OJ"
+                  href="https://ronkericefarmer.com?ref=0NQ0OJ"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-mono bg-primary/10 px-2 py-1 rounded-md text-red-600 font-semibold hover:bg-primary/20 transition"
@@ -533,7 +533,7 @@ export default function InvestmentCalculator() {
                 <div>
                   <h4 className="text-red-800 dark:text-red-400 mb-1 font-bold text-sm leading-7">Important Notice</h4>
                   <p className="text-sm text-red-700 dark:text-red-300">
-                    The Current Network Yield Rate changes as players join/leave. Enter your current rate from game stats for accurate earnings.
+                    The <strong>Current Network Yield Rate</strong> changes as players join/leave. Enter your current rate from game stats for accurate earnings.
                   </p>
                 </div>
               </div>
