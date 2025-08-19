@@ -533,7 +533,8 @@ export default function InvestmentCalculator() {
                 <div>
                   <h4 className="text-red-800 dark:text-red-400 mb-1 font-bold text-sm leading-7">Important Notice</h4>
                   <p className="text-sm text-red-700 dark:text-red-300">
-                    The <strong>Current Network Yield Rate</strong> changes as players join/leave. Enter your current rate from game stats for accurate earnings.
+                    The <strong>Current Network Yield Rate</strong> changes as players join/leave. Enter your current
+                    rate from game stats for accurate earnings.
                   </p>
                 </div>
               </div>
@@ -787,6 +788,9 @@ export default function InvestmentCalculator() {
                         </span>
                       )}
                     </div>
+                    <div className="mt-2 p-2 bg-yellow-50 dark:bg-yellow-950/30 border border-yellow-200 dark:border-yellow-700 rounded text-xs text-yellow-800 dark:text-yellow-200">
+                      <strong>Daily Limit:</strong> No penalty withdrawals are limited to 5 times per day only
+                    </div>
                   </div>
                 </div>
 
@@ -854,7 +858,7 @@ export default function InvestmentCalculator() {
                 href="https://etherscan.io/address/0x17f016c583061e260435ec7AC8302B67c04b4Cde"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-mono text-primary hover:text-primary/80 transition-colors underline decoration-dotted"
+                className="font-mono text-red-600 hover:text-red-600/80 transition-colors underline decoration-dotted"
               >
                 0x17f016c583061e260435ec7AC8302B67c04b4Cde
               </a>
