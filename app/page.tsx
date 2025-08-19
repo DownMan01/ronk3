@@ -393,6 +393,10 @@ export default function InvestmentCalculator() {
                           <span>Land Cost:</span>
                           <span className="font-semibold">{tier.landCost.toLocaleString()} $RONKE</span>
                         </div>
+                         <div className="flex justify-between">
+                          <span>Farmer Cost:</span>
+                          <span className="font-semibold">{tier.farmerCost} $RICE</span>
+                        </div>
                         <div className="flex justify-between">
                           <span>Farmers:</span>
                           <span className="font-semibold">{tier.farmersCount} slots</span>
