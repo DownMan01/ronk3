@@ -858,7 +858,7 @@ export default function InvestmentCalculator() {
                 href="https://etherscan.io/address/0x17f016c583061e260435ec7AC8302B67c04b4Cde"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-mono text-primary hover:text-primary/80 transition-colors underline decoration-dotted"
+                className="font-mono text-red-600 hover:text-red-600/80 transition-colors underline decoration-dotted"
               >
                 0x17f016c583061e260435ec7AC8302B67c04b4Cde
               </a>
