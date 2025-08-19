@@ -20,14 +20,15 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Ronke Rice Farmer Calculator",
-    description: "Estimate your investment costs and potential earnings with the Ronke Rice Farmer Calculator.",
+    description:
+      "Estimate your investment costs and potential earnings with the Ronke Rice Farmer Calculator.",
     url: "https://ronke.notedrop.xyz",
     siteName: "Ronke Rice Farmer",
     images: [
       {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
+        url: "https://pbs.twimg.com/profile_banners/1920678776981127168/1751107488/1500x500",
+        width: 1500,
+        height: 500,
         alt: "Ronke Rice Farmer Earnings Calculator",
       },
     ],
@@ -37,14 +38,17 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Ronke Rice Farmer Calculator",
-    description: "Easily calculate investment costs and earnings projections with the Ronke Rice Farmer Calculator.",
-    images: ["/og-image.png"],
+    description:
+      "Easily calculate investment costs and earnings projections with the Ronke Rice Farmer Calculator.",
+    images: [
+      "https://pbs.twimg.com/profile_banners/1920678776981127168/1751107488/1500x500",
+    ],
     creator: "@jiecrypto0",
   },
   themeColor: "#16a34a", // Tailwind green-600
   manifest: "/manifest.json",
-    generator: 'v0.app'
 }
+
 
 export default function RootLayout({
   children,
