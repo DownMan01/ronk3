@@ -46,7 +46,7 @@ const LAND_TIERS = {
 
 const FARMING_FORMULA = {
   totalDailyReward: 148408.65,
-  totalNetworkYield: 1700210,
+  totalNetworkYield: 1705310,
 }
 
 const NFT_MULTIPLIERS = {
@@ -743,7 +743,7 @@ export default function CustomSetupPage() {
                 <p className="text-sm text-muted-foreground">
                   Use this code:{" "}
                   <a
-                    href="https://ronkericefarmer.com/connect?ref=0NQ0OJ"
+                    href="https://ronkericefarmer.com?ref=0NQ0OJ"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-mono font-bold text-primary hover:text-primary/80 transition-colors"
@@ -935,7 +935,7 @@ export default function CustomSetupPage() {
                 <div className="text-2xl font-bold dark:text-green-400 mb-1 text-red-600">
                   {formatCurrency(dailyEarnings * selectedDays)}
                 </div>
-                <div className="text-sm text-slate-700">
+                <div className="text-sm text-red-400">
                   {(
                     FARMING_FORMULA.totalDailyReward *
                     (customYieldRate / customNetworkYield) *
