@@ -775,13 +775,13 @@ export default function InvestmentCalculator() {
                       <Badge className="bg-green-500 text-white">No penalty</Badge>
                     </div>
                     <div className="text-sm text-green-700 dark:text-green-300">
-                      Amount: <span className="font-semibold">Up to {(riceAmount * 0.0069).toFixed(2)} $RICE</span>
+                      Amount: <span className="font-semibold">Up to {(riceAmount * 0.0068).toFixed(2)} $RICE</span>
                       {riceAmount > 0 && (
                         <span className="ml-2">
                           (
                           {formatCurrency(
                             riceAmount *
-                              0.0069 *
+                              0.0068 *
                               (prices["rice-2"]?.[currency.toLowerCase() as keyof (typeof prices)["rice-2"]] || 0),
                           )}
                           )
@@ -858,7 +858,7 @@ export default function InvestmentCalculator() {
                 href="https://etherscan.io/address/0x17f016c583061e260435ec7AC8302B67c04b4Cde"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-mono text-red-600 hover:text-red-600/80 transition-colors underline decoration-dotted"
+                className="font-mono text-primary hover:text-primary/80 transition-colors underline decoration-dotted"
               >
                 0x17f016c583061e260435ec7AC8302B67c04b4Cde
               </a>
