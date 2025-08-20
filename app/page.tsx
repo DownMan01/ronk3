@@ -196,7 +196,7 @@ export default function InvestmentCalculator() {
               <p className="text-sm text-muted-foreground">
                 Use this code:{" "}
                 <a
-                  href="https://ronkericefarmer.com?ref=0NQ0OJ"
+                  href="https://ronkericefarmer.com/connect?ref=0NQ0OJ"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-mono bg-primary/10 px-2 py-1 rounded-md text-red-600 font-semibold hover:bg-primary/20 transition"
