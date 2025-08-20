@@ -58,7 +58,7 @@ const FARMER_TYPES = {
 
 const FARMING_FORMULA = {
   totalDailyReward: 148408.65,
-  totalNetworkYield: 1705310,
+  totalNetworkYield: 1828785,
 }
 
 export default function InvestmentCalculator() {
