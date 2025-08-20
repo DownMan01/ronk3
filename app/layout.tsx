@@ -60,8 +60,9 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32"/>
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
+        <meta name="amobile-web-app-capable" content="yes" />
+        <meta name="google-adsense-account" content="ca-pub-6639387700552171">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
