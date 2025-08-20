@@ -570,7 +570,7 @@ export default function InvestmentCalculator() {
               </div>
             </div>
 
-            <div className="text-center p-6 bg-green-50 dark:bg-green-950/20 rounded-lg">
+            <div className="text-center p-6 bg-green-50 dark:bg-green-950/20 rounded-lg mb-6">
               <div className="text-2xl font-bold text-green-600 dark:text-green-400 mb-1">
                 {formatCurrency(dailyEarnings)}
               </div>
