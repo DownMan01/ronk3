@@ -743,7 +743,7 @@ export default function CustomSetupPage() {
                 <p className="text-sm text-muted-foreground">
                   Use this code:{" "}
                   <a
-                    href="https://ronkericefarmer.com?ref=0NQ0OJ"
+                    href="https://ronkericefarmer.com/connect?ref=0NQ0OJ"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-mono font-bold text-primary hover:text-primary/80 transition-colors"
