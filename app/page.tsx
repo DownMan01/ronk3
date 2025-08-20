@@ -457,7 +457,7 @@ export default function InvestmentCalculator() {
                   <div>
                     <h4 className="text-red-800 dark:text-red-400 mb-1 font-bold text-sm">Cost Disclaimer</h4>
                     <p className="text-sm text-red-700 dark:text-red-300">
-                     Total cost projections are estimates only and may vary depending on market conditions. • <strong>Price updates every 30 seconds</strong>
+                     Total cost projections are estimates only and may vary depending on market conditions. <strong>Total setup costs are updated every 30 seconds</strong>.
                     </p>
                   </div>
                 </div>
