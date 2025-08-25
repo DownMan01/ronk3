@@ -593,12 +593,12 @@ export default function CustomSetupPage() {
               <div className="space-y-4">
                 <div className="flex items-center gap-2 mb-3">
                   <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                  <h3 className="text-lg font-semibold text-foreground">Standard Rokne NFT</h3>
+                  <h3 className="text-lg font-semibold text-foreground">Standard Ronke NFT</h3>
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="standard-nft" className="text-sm font-medium">
-                    Number of Standard Rokne NFTs:
+                    Number of Standard Ronke NFTs:
                   </Label>
                   <Input
                     id="standard-nft"
