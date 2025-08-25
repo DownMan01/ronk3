@@ -181,7 +181,7 @@ export default function CustomSetupPage() {
     let standardMultiplier = 1.0
     let oneOfOneMultiplier = 1.0
 
-    // Calculate Standard Rokne NFT multiplier
+    // Calculate Standard ronke NFT multiplier
     for (let i = NFT_MULTIPLIERS.standard.length - 1; i >= 0; i--) {
       const tier = NFT_MULTIPLIERS.standard[i]
       if (nftCounts.standard >= tier.count) {
@@ -589,7 +589,7 @@ export default function CustomSetupPage() {
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              {/* Standard Rokne NFT Section */}
+              {/* Standard ronke NFT Section */}
               <div className="space-y-4">
                 <div className="flex items-center gap-2 mb-3">
                   <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
@@ -609,7 +609,7 @@ export default function CustomSetupPage() {
                       setNftCounts((prev) => ({ ...prev, standard: Math.max(0, Number(e.target.value) || 0) }))
                     }
                     className="w-full text-foreground border-border"
-                    placeholder="Enter number of Standard Rokne NFTs"
+                    placeholder="Enter number of Standard ronke NFTs"
                   />
                 </div>
 
