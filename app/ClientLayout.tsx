@@ -48,6 +48,7 @@ export default function ClientLayout({
             --font-mono: ${GeistMono.variable};
           }
         `}</style>
+        <script type='text/javascript' src='//pl27596717.revenuecpmgate.com/6a/46/f8/6a46f8214134ab87e8de5b36b7498db7.js'></script>
       </head>
       <body className="bg-background text-foreground antialiased">
         <Suspense fallback={<div>Loading...</div>}>
