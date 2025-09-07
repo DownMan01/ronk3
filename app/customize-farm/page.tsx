@@ -45,7 +45,7 @@ const LAND_TIERS = {
 }
 
 const FARMING_FORMULA = {
-  totalDailyReward: 148408.65,
+  totalDailyReward: 163249.52,
   totalNetworkYield: 2222510,
 }
 
