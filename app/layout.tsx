@@ -58,6 +58,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <script type='text/javascript' src='//pl27596717.revenuecpmgate.com/6a/46/f8/6a46f8214134ab87e8de5b36b7498db7.js'></script>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32"/>
         <link rel="apple-touch-icon" href="/favicon.png" />
