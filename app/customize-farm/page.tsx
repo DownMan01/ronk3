@@ -20,15 +20,30 @@ type Currency = "PHP" | "USD"
 
 const FARMER_TYPES = {
   basic: { name: "Basic Farmer", cost: 0, tier: "Free", yieldRate: 100, allowedTiers: [1, 2, 3], waterUsage: 10 },
-  expert: { name: "Expert Farmer", cost: 200, tier: "Tier 1", yieldRate: 250, allowedTiers: [1, 2, 3], waterUsage: 30 },
-  master: { name: "Master Farmer", cost: 400, tier: "Tier 2", yieldRate: 550, allowedTiers: [2, 3], waterUsage: 60 },
+  expert: {
+    name: "Expert Farmer",
+    cost: 200,
+    tier: "Tier 1",
+    yieldRate: 250,
+    allowedTiers: [1, 2, 3, 4],
+    waterUsage: 30,
+  },
+  master: { name: "Master Farmer", cost: 400, tier: "Tier 2", yieldRate: 550, allowedTiers: [2, 3, 4], waterUsage: 60 },
   legendary: {
     name: "Legendary Farmer",
     cost: 700,
     tier: "Tier 3",
     yieldRate: 1000,
-    allowedTiers: [3],
+    allowedTiers: [3, 4],
     waterUsage: 120,
+  },
+  mythical: {
+    name: "Mythical Farmer",
+    cost: 1000,
+    tier: "Tier 4",
+    yieldRate: 1500,
+    allowedTiers: [3, 4],
+    waterUsage: 175,
   },
 }
 
@@ -39,8 +54,15 @@ const LAND_TIERS = {
     cost: 188500,
     slots: 8,
     name: "Tier 3 Land",
-    allowedFarmers: ["basic", "expert", "master", "legendary"],
+    allowedFarmers: ["basic", "expert", "master", "legendary", "mythical"],
     waterCapacity: 600,
+  },
+  4: {
+    cost: 362500,
+    slots: 10,
+    name: "Tier 4 Land",
+    allowedFarmers: ["expert", "master", "legendary", "mythical"],
+    waterCapacity: 1000,
   },
 }
 
@@ -71,10 +93,11 @@ export default function CustomSetupPage() {
 
   const [currentLandTier, setCurrentLandTier] = useState(1)
   const [farmerCounts, setFarmerCounts] = useState({
-    basic: 1,
-    expert: 3,
+    basic: 0,
+    expert: 0,
     master: 0,
     legendary: 0,
+    mythical: 0,
   })
   const [customNetworkYield, setCustomNetworkYield] = useState(FARMING_FORMULA.totalNetworkYield)
 
@@ -90,14 +113,17 @@ export default function CustomSetupPage() {
     const hasLegendary = farmerCounts.legendary > 0
     const hasMaster = farmerCounts.master > 0
     const hasBasic = farmerCounts.basic > 0
+    const hasMythical = farmerCounts.mythical > 0
 
     let minTierByFarmers = 1
-    if (hasLegendary) minTierByFarmers = 3
+    if (hasMythical) minTierByFarmers = 4
+    else if (hasLegendary) minTierByFarmers = 3
     else if (hasMaster) minTierByFarmers = 2
     else if (hasBasic && !hasMaster && !hasLegendary) minTierByFarmers = 1
 
     let minTierBySlots = 1
-    if (totalFarmers > 6) minTierBySlots = 3
+    if (totalFarmers > 8) minTierBySlots = 4
+    else if (totalFarmers > 6) minTierBySlots = 3
     else if (totalFarmers > 4) minTierBySlots = 2
 
     return Math.max(minTierByFarmers, minTierBySlots)
@@ -279,10 +305,12 @@ export default function CustomSetupPage() {
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 py-8 space-y-6">
         <div className="text-center py-8">
-          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-4 drop-shadow-lg">Custom Farm Setup</h1>
-          <p className="text-lg text-white/90 max-w-2xl mx-auto">
-            Customize your farm configuration and calculate investment returns with real-time prices
-          </p>
+          <div className="backdrop-blur-sm rounded-lg p-6 mx-auto max-w-4xl bg-transparent">
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-4 drop-shadow-lg">Custom Farm Setup</h1>
+            <p className="text-lg text-white/90 max-w-2xl mx-auto">
+              Customize your farm configuration and calculate investment returns with real-time prices
+            </p>
+          </div>
         </div>
 
         <Card className="bg-card/95 backdrop-blur-md shadow-xl">
@@ -480,7 +508,7 @@ export default function CustomSetupPage() {
           </Card>
         </div>
 
-                <Card className="bg-card/95 backdrop-blur-md shadow-xl">
+        <Card className="bg-card/95 backdrop-blur-md shadow-xl">
           <CardContent className="p-6">
             <div
               dangerouslySetInnerHTML={{
@@ -500,7 +528,7 @@ export default function CustomSetupPage() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
               {Object.entries(FARMER_TYPES).map(([key, farmer]) => {
                 const isAllowed = currentLand.allowedFarmers.includes(key)
                 const isOverCapacity = totalFarmers >= currentLand.slots
@@ -711,27 +739,26 @@ export default function CustomSetupPage() {
           </CardContent>
         </Card>
 
-               <Card className="bg-card/95 backdrop-blur-md shadow-xl">
-  <CardContent className="p-6">
-    <div
-      dangerouslySetInnerHTML={{
-        __html: `
-          <script type="text/javascript">
-            atOptions = {
-              'key': '053696941da4ee3171dd8b43e657f280',
-              'format': 'iframe',
-              'height': 60,
-              'width': 468,
-              'params': {}
-            };
-          </script>
-          <script type="text/javascript" src="//www.highperformanceformat.com/053696941da4ee3171dd8b43e657f280/invoke.js"></script>
-        `,
-      }}
-    />
-  </CardContent>
-</Card>
-
+        <Card className="bg-card/95 backdrop-blur-md shadow-xl">
+          <CardContent className="p-6">
+            <div
+              dangerouslySetInnerHTML={{
+                __html: `
+                  <script type="text/javascript">
+                    atOptions = {
+                      'key': '053696941da4ee3171dd8b43e657f280',
+                      'format': 'iframe',
+                      'height': 60,
+                      'width': 468,
+                      'params': {}
+                    };
+                  </script>
+                  <script type="text/javascript" src="//www.highperformanceformat.com/053696941da4ee3171dd8b43e657f280/invoke.js"></script>
+                `,
+              }}
+            />
+          </CardContent>
+        </Card>
 
         <Card className="bg-card/95 backdrop-blur-md shadow-xl">
           <CardHeader>
