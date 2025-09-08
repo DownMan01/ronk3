@@ -338,6 +338,17 @@ export default function InvestmentCalculator() {
           </CardContent>
         </Card>
 
+                <Card className="bg-card/95 backdrop-blur-md shadow-xl">
+          <CardContent className="p-6">
+            <div
+              dangerouslySetInnerHTML={{
+                __html: `<script async="async" data-cfasync="false" src="//pl27596728.revenuecpmgate.com/37ae4c1f685b8f0bee4953022c6d2c65/invoke.js"></script>
+              <div id="container-37ae4c1f685b8f0bee4953022c6d2c65"></div>`,
+              }}
+            />
+          </CardContent>
+        </Card>
+        
         <Card className="bg-card/95 backdrop-blur-md shadow-xl">
           <CardHeader>
             <CardTitle>Select Farm Tier</CardTitle>
