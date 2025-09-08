@@ -711,16 +711,27 @@ export default function CustomSetupPage() {
           </CardContent>
         </Card>
 
-                <Card className="bg-card/95 backdrop-blur-md shadow-xl">
-          <CardContent className="p-6">
-            <div
-              dangerouslySetInnerHTML={{
-                __html: `<script async="async" data-cfasync="false" src="//pl27596728.revenuecpmgate.com/37ae4c1f685b8f0bee4953022c6d2c65/invoke.js"></script>
-<div id="container-37ae4c1f685b8f0bee4953022c6d2c65"></div>`,
-              }}
-            />
-          </CardContent>
-        </Card>
+               <Card className="bg-card/95 backdrop-blur-md shadow-xl">
+  <CardContent className="p-6">
+    <div
+      dangerouslySetInnerHTML={{
+        __html: `
+          <script type="text/javascript">
+            atOptions = {
+              'key': '053696941da4ee3171dd8b43e657f280',
+              'format': 'iframe',
+              'height': 60,
+              'width': 468,
+              'params': {}
+            };
+          </script>
+          <script type="text/javascript" src="//www.highperformanceformat.com/053696941da4ee3171dd8b43e657f280/invoke.js"></script>
+        `,
+      }}
+    />
+  </CardContent>
+</Card>
+
 
         <Card className="bg-card/95 backdrop-blur-md shadow-xl">
           <CardHeader>
