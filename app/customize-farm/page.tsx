@@ -37,8 +37,8 @@ const FARMER_TYPES = {
     allowedTiers: [3, 4],
     waterUsage: 120,
   },
-  mythical: {
-    name: "Mythical Farmer",
+  elite: {
+    name: "Elite Farmer",
     cost: 1000,
     tier: "Tier 4",
     yieldRate: 1500,
@@ -54,14 +54,14 @@ const LAND_TIERS = {
     cost: 188500,
     slots: 8,
     name: "Tier 3 Land",
-    allowedFarmers: ["basic", "expert", "master", "legendary", "mythical"],
+    allowedFarmers: ["basic", "expert", "master", "legendary", "elite"],
     waterCapacity: 600,
   },
   4: {
     cost: 362500,
     slots: 10,
     name: "Tier 4 Land",
-    allowedFarmers: ["expert", "master", "legendary", "mythical"],
+    allowedFarmers: ["expert", "master", "legendary", "elite"],
     waterCapacity: 1000,
   },
 }
@@ -97,7 +97,7 @@ export default function CustomSetupPage() {
     expert: 0,
     master: 0,
     legendary: 0,
-    mythical: 0,
+    elite: 0,
   })
   const [customNetworkYield, setCustomNetworkYield] = useState(FARMING_FORMULA.totalNetworkYield)
 
@@ -113,10 +113,10 @@ export default function CustomSetupPage() {
     const hasLegendary = farmerCounts.legendary > 0
     const hasMaster = farmerCounts.master > 0
     const hasBasic = farmerCounts.basic > 0
-    const hasMythical = farmerCounts.mythical > 0
+    const hasElite = farmerCounts.elite > 0
 
     let minTierByFarmers = 1
-    if (hasMythical) minTierByFarmers = 4
+    if (hasElite) minTierByFarmers = 4
     else if (hasLegendary) minTierByFarmers = 3
     else if (hasMaster) minTierByFarmers = 2
     else if (hasBasic && !hasMaster && !hasLegendary) minTierByFarmers = 1
