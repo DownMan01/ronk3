@@ -68,7 +68,7 @@ const LAND_TIERS = {
 
 const FARMING_FORMULA = {
   totalDailyReward: 163249.52,
-  totalNetworkYield: 2296075,
+  totalNetworkYield: 3244660,
 }
 
 const NFT_MULTIPLIERS = {
